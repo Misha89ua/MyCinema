@@ -1,0 +1,52 @@
+table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+thead th {
+  background-color: #006DCC;
+  color: white;
+}
+
+tbody td {
+  background-color: #EEEEEE;
+}
+
+tr td:first-child,
+tr th:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+tr td:last-child,
+tr th:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+
+
+
+.footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	height: 50px;
+	background-color: #4e5d6c;
+	padding: 15px;
+}
+
+.error {
+	color: red;
+}
+
+.q{
+	background-color: aqua;
+}
+
+
+
+
+
+
+
