@@ -26,6 +26,9 @@ public class FilmAddRequest {
 	private int movieLength;
 	private String filmDescription;
 	private String imagePath;
+	private String image;
+	private int numberOfLikes;
+	private int numberOfDislikes;
 	private List<Category> categorysList = Arrays.asList(Category.values());
 	private Category category = Category.UNKNOWN;
 	private List<Country> countriesList = Arrays.asList(Country.values());

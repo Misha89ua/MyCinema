@@ -36,6 +36,7 @@ import ua.myCinema.service.FilmService;
 import ua.myCinema.service.HallService;
 import ua.myCinema.service.PersonService;
 import ua.myCinema.service.UserService;
+import ua.myCinema.service.utils.CustomFileUtils;
 
 @Controller
 //@RequestMapping({"/admin"})
@@ -148,13 +149,16 @@ public class AdminController {
 	}
 	
 	@PostMapping("/admin/film/add")
-	public String filmAdd(@Valid @ModelAttribute("filmRequest") FilmAddRequest request, BindingResult br) {
+	public String filmAdd(@Valid @ModelAttribute("filmRequest") FilmAddRequest request, BindingResult br) throws IOException {
 		if(br.hasErrors()) {
 			return ("admin/film-edit-add");
 		}
 		filmService.saveFilm(FilmMapper.filmAddRequestToFilmEntity(request));
-		return ("user/film-profile");
-	}	
+		request.setImage(CustomFileUtils.getImage("films", "", ""));
+		return "user/film-profile";
+	}
+	
+
 	
 	@GetMapping("/admin/film-edit/{filmId}")
 	@PreAuthorize("hasAnyRole('ADMIN')")

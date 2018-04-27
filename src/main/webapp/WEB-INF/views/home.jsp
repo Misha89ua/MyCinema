@@ -9,13 +9,43 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
     
       
-      <div class="item active">
+            <div class="item active">
+		  <div style="width: 90%; height:300px; margin-left: 5%; border-radius: 20px; display: flex; ">
+		        
+		    <div style="display:flex; flex-direction: column; align-items: center; margin-top:-13px"> 
+		    	<br>        
+		        <img style="width: 200px; border-radius: 10px" src="data:image/png; base64, ${film0.image}" alt="Profile image"/>
+		
+		    </div>
+		    <div style="margin-left: 5%; width: 200px">                    
+		            <div>
+		           		 <h1>${film0.filmName}</h1>
+		            </div>
+		            <div>
+			          	<br/> категорія: ${film0.category.val()}
+			         	<br/> країна: ${film0.country.val()}
+			            <br/> рік: ${film0.year} р.
+			            <br /> тривалість: ${film0.movieLength} хв.
+		            </div>
+		            
+			</div> 
+			<div style="margin-left: 5%; width: 80%">
+				<h3>Опис фільму:</h3>
+				<br><br>
+				${film0.filmDescription}
+			</div>      
+		</div> 
+      </div>
+      
+      
+      <div class="item">
 		  <div style="width: 90%; height:300px; margin-left: 5%; border-radius: 20px; display: flex; ">
 		        
 		    <div style="display:flex; flex-direction: column; align-items: center; margin-top:-13px"> 

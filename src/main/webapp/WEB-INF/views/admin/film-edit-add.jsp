@@ -54,7 +54,7 @@
 		
 		<div class="form-group">
 			<label class="control-label">Опис фільму</label>
-			<form:textarea path="filmDescription" cssClass="form-control" title="Опис фільму"/>
+			<form:textarea path="filmDescription" cssClass="form-control" title="Опис фільму" rows="7"/>
 		</div>
 		
 		<div class="form-group" style="text-align: center;">

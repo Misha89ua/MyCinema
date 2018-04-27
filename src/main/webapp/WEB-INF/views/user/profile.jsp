@@ -4,18 +4,42 @@
 
 <div class="container" style="width: 50%; height:500px; background-color: #cce6ff; border-radius: 20px">
         
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 200px; width: 106%; margin-left: -3%; border-radius: 20px">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 200px; width: 106%; margin-left: -3%; border-radius: 20px 20px 0 0; background-color:#3399ff">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
     
-		<div class="item active">
+    	<div class="item active">
+		  <div style="width: 90%; height:300px; border-radius: 20px; display: flex">
+		        
+		    <div style="margin-left: 25%; width: 200px">                    
+		            <div>
+		           		 <h1>${film0.filmName}</h1>
+		            </div>
+		            <div>
+			          	<br/> категорія: ${film0.category.val()}
+			         	<br/> країна: ${film0.country.val()}
+			            <br/> рік: ${film0.year} р.
+			            <br /> тривалість: ${film0.movieLength} хв.
+		            </div>
+		            
+			</div>    
+			<div style="display:flex; flex-direction: column"> 
+		    	<br>        
+		        <img style="width: 120px; border-radius: 10px" src="data:image/png; base64, ${film0.image}" alt="Profile image"/>
+		
+		    </div> 
+		</div> 
+      </div>
+    
+		<div class="item">
 		  <div style="width: 90%; height:300px; border-radius: 20px; display: flex">
 		        
 		    <div style="margin-left: 25%; width: 200px">                    
@@ -86,11 +110,11 @@
       
     </div>
     <!-- Left and right controls -->
-    <a style="border-radius: 20px 0 0 20px" class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <a style="border-radius: 20px 0 0 0" class="left carousel-control" href="#myCarousel" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a style="border-radius: 0 20px 20px 0" class="right carousel-control" href="#myCarousel" data-slide="next">
+    <a style="border-radius: 0 20px 0 0" class="right carousel-control" href="#myCarousel" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
@@ -100,11 +124,11 @@
   
   
   
-  <div >
-    <div style="margin:-35px 0px 0px 25px; width: 20%; height:120px">         
-        		<img width="140px" align="left"  src="data:image/png; base64, ${userProfile.image}" alt="Profile image"/>
+  <div style="display: flex;">
+    <div style="margin:50px 30px 0px 25px; height:120px">         
+        		<img style="width: 140px; border-radius: 50%" align="left"  src="data:image/png; base64, ${userProfile.image}" alt="Profile image"/>
     </div>
-    <div style="margin:-70px 0px 0px 0px;margin-left: 33%">                    
+    <div style="margin:50px 0px 0px 50px; display: flex; flex-direction: column; align-items: center;">                    
             <div>
            		 <h1>${userProfile.firstName} ${userProfile.lastName}</h1>
             </div>
